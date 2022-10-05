@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import PercentChange from "./PercentChange";
+import TableFilters from "./TableFilters";
 
 const HeaderInfos = () => {
   const [headerData, setHeaderData] = useState([]);
@@ -51,6 +52,7 @@ const HeaderInfos = () => {
         <li>BTC Dominance : {btcData && btcData.toFixed(1) + "%"}</li>
         <li>ETH Dominance : {ethData && ethData.toFixed(1) + "%"}</li>
       </ul>
+      <TableFilters />
     </div>
   );
 };
